@@ -30,6 +30,12 @@
 .week-cell {
   width: 14%;
   height: 100px;
+  font-weight: 600;
   text-align: center;
   border: 1px solid black;
+}
+
+.disabled {
+  font-weight: 400;
+  color: grey;
 }
