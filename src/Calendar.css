@@ -1,0 +1,35 @@
+.calendar {
+  max-width: 1000px;
+  border: 1px solid black;
+}
+
+.cal-header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.header-date {
+  padding: 0 50px 0 50px;
+}
+
+.days-names {
+  display: flex;
+  justify-content: space-around;
+}
+
+.day-name {
+  font-weight: 600;
+}
+
+.week-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.week-cell {
+  width: 14%;
+  height: 100px;
+  text-align: center;
+  border: 1px solid black;
+}
