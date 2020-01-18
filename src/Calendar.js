@@ -41,6 +41,10 @@ const Calendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
 
+  const onDateClick = day => {
+    setSelectedDate(day);
+  };
+
   const renderCells = () => {
     const monthStart = dateFns.startOfMonth(currentDate);
     const monthEnd = dateFns.endOfMonth(monthStart);
@@ -68,7 +72,7 @@ const Calendar = () => {
                 : ""
             }`}
             key={day}
-            onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
+            onClick={() => onDateClick(cloneDay)}
           >
             <span className="number">{formattedDate}</span>
             {/* <span className="bg">{formattedDate}</span> */}
@@ -84,10 +88,6 @@ const Calendar = () => {
       days = [];
     }
     return <div className="body">{rows}</div>;
-  };
-
-  const onDateClick = day => {
-    setSelectedDate(day);
   };
 
   return (
